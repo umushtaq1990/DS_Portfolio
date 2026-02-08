@@ -1,387 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Section</title>
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman Mushtaq | Senior ML Engineer (Azure)</title>
+    <meta name="description" content="Senior ML engineer with 10+ years delivering AI/ML, data platforms, and MLOps products.">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Analytics: replace data-domain with your deployed domain -->
+    <!-- <script defer data-domain="your-domain.com" src="https://plausible.io/js/script.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="logo">Usman Mushtaq</div>
+        <nav class="nav-links">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button">Menu</button>
+      </div>
+    </header>
 
-<style>
-  .about-section {
-    text-align: center;
-    padding: 50px 0;
-  }
-  .about-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  .about-section img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Makes the image round */
-    margin-bottom: 20px;
-  }
-  .about-section p {
-    color: #333;
-  }
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Senior ML Engineer (Azure)</span>
+            <h1>AI products, shipped with confidence</h1>
+            <p class="lead">
+              Based in Germany with 10+ years across consulting, media, and semiconductor industries.
+              I build ML systems, RAG applications, and data platforms that deliver measurable impact,
+              backed by strong MLOps and stakeholder alignment.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="projects.html">View Projects</a>
+              <a class="button secondary" href="contact.html">Start a Conversation</a>
+            </div>
+            <div class="stat-grid">
+              <div class="stat">
+                <div class="stat-value">10+ yrs</div>
+                <div class="stat-label">Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Industries</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value">5+</div>
+                <div class="stat-label">AI Products</div>
+              </div>
+            </div>
+          </div>
+          <aside class="hero-card reveal">
+            <img src="images/about/usman_about_.JPG" alt="Usman Mushtaq">
+            <h3>Senior ML Engineer + Product Lead</h3>
+            <p>
+              Azure ML, Synapse, Python, SQL, and full-stack MLOps. Focused on dependable systems,
+              explainable models, and stakeholder-ready storytelling.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Azure ML</span>
+              <span class="tag">RAG</span>
+              <span class="tag">MLOps</span>
+              <span class="tag">Forecasting</span>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-  /* Additional CSS for Projects Section */
-.projects-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-}
-.projects-section .card {
-  height: 100%;
-}
-.projects-section .card-img-top {
-  height: 180px;
-  object-fit: cover; /* This makes sure the image covers the area properly */
-}
-.card-body {
-  padding: 15px;
-}
-.projects-section .card-body {
-  display: flex;
-  flex-direction: column;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  margin-bottom: 15px;
-}
-.projects-section .card-text {
-  text-align: justify;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 9em;
-}
-.projects-section .project-actions {
-  margin-top: auto;
-  display: flex;
-  gap: 8px;
-  flex-wrap: nowrap;
-}
-.projects-section .project-actions .btn {
-  margin-bottom: 0;
-}
-@media (max-width: 576px) {
-  .projects-section .project-actions {
-    flex-wrap: wrap;
-  }
-}
-
-/* Additional CSS for Skills Section */
-.skills-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.skills-section .card {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
-}
-.skills-section .card-body {
-  padding: 15px;
-}
-.skills-section .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-.skills-section .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-.skills-section .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Additional CSS for Contact Section */
-.contact-section {
-  padding: 50px 0;
-}
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.social-icon {
-  width: 50px; /* Size of your icons */
-  margin-bottom: 10px;
-}
-/* Hover effect for icons */
-.social-icon:hover {
-  opacity: 0.7;
-}
-/* Style for links in the Contact section */
-.contact-section a {
-  color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
-  margin-bottom: 10px;
-}
-.contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
-}
-
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-}
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
-}
-
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
-  }
-}
-
-
-</style>
-
-</head>
-<body>
-
-<section id='about' class="about-section">
-  <div class="container">
-    <h2>About</h2>
-    <img src="images/about/usman_about_.JPG" alt="About Me">
-    <p style="text-align: justify">I am a highly skilled Data Scientist and Machine Learning Engineer with extensive experience in developing end-to-end data solutions. My expertise spans a wide range of technologies, including Azure ML Service, Synapse, DevOps, SQL, Python, and data visualization tools like Power BI, Plotly, Matplotlib, and Seaborn. I specialize in building scalable machine learning models, developing efficient data pipelines, and creating interactive dashboards that empower data-driven decision-making. With a strong foundation in object-oriented programming (OOP) and modular programming practices, I ensure high-quality, maintainable code. I have successfully delivered projects such as churn prediction models, recommendation engines, anomaly detection systems, and time series forecasting modules. My ability to translate complex data into actionable insights through storytelling and visualizations helps drive business strategies and outcomes. Additionally, I am passionate about sharing knowledge and have developed and delivered Data Science training programs for various skill levels.</p>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects-section bg-light" id="projects">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Project 1 -->
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="images/projects/recommender.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Recommender System</h5>
-            <p class="card-text">The goal of this project was to develop a product recommendation engine for an e-commerce platform to enhance user engagement and drive sales. By delivering personalized product suggestions, the engine aimed to improve the shopping experience and increase conversion rates. Using advanced machine learning techniques such as neural networks, collaborative filtering, and matrix factorization, the system analyzed user-user and user-item interactions to generate highly relevant recommendations. This solution significantly boosted customer satisfaction, promoted cross-selling, and contributed to a measurable increase in revenue and customer retention.</p>
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="https://github.com/umushtaq1990/ProductRecommendationSystem" class="btn btn-secondary">Source Code</a>
+      <section class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Capabilities</span>
+            <h2>What I deliver</h2>
+            <p class="lead">
+              From discovery to deployment, I build reliable, traceable, and cost-efficient AI systems.
+            </p>
+          </div>
+          <div class="grid cols-3">
+            <div class="card reveal">
+              <h3>AI/ML Solutions</h3>
+              <p>Recommendation engines, churn prediction, anomaly detection, and forecasting.</p>
+              <div class="tag-row">
+                <span class="tag">Modeling</span>
+                <span class="tag">Explainability</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3>Data Platforms</h3>
+              <p>Modern pipelines, warehousing, and analytics layers with governance built in.</p>
+              <div class="tag-row">
+                <span class="tag">Synapse</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3>DevOps + MLOps</h3>
+              <p>CI/CD for ML, reproducible training runs, monitoring, and rapid rollbacks.</p>
+              <div class="tag-row">
+                <span class="tag">Azure DevOps</span>
+                <span class="tag">Observability</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3>RAG + Agentic AI</h3>
+              <p>GPT-4 powered RAG apps, vector search, and multi-agent workflows.</p>
+              <div class="tag-row">
+                <span class="tag">LangChain</span>
+                <span class="tag">Azure AI Search</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3>Visualization + Storytelling</h3>
+              <p>Dashboards and narratives that help teams act on data with confidence.</p>
+              <div class="tag-row">
+                <span class="tag">Power BI</span>
+                <span class="tag">Plotly</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <h3>Product Leadership</h3>
+              <p>Roadmaps, stakeholder alignment, and measurable delivery outcomes.</p>
+              <div class="tag-row">
+                <span class="tag">Roadmaps</span>
+                <span class="tag">Execution</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="images/projects/churn.png" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Churn Prediction</h5>
-            <p class="card-text"> The objective of this project was to develop a churn prediction model to identify customers at risk of leaving the business. By leveraging advanced machine learning techniques such as logistic regression, decision trees, and gradient boosting, the model analyzed customer behavior, transaction history, and engagement patterns to predict the likelihood of churn. The insights provided by this tool enabled the organization to implement targeted retention strategies, such as personalized offers and proactive customer outreach, resulting in reduced churn rates, improved customer satisfaction, and increased revenue stability.</p>
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="https://github.com/umushtaq1990/ChurnPrediction" class="btn btn-secondary">Source Code</a>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Selected Work</span>
+            <h2>Featured projects</h2>
+            <p class="lead">Selected work that demonstrates end-to-end delivery and business impact.</p>
+          </div>
+          <div class="grid cols-3">
+            <div class="card reveal">
+              <img src="images/projects/recommender.png" alt="Recommender System">
+              <h3>Recommender System</h3>
+              <p>Hybrid models with GPT-4 explainability; 70%+ hit rate across 5 industries.</p>
+              <div class="cta-row">
+                <a class="button secondary" href="projects.html">Case Study</a>
+                <a class="button primary" href="https://github.com/umushtaq1990/ProductRecommendationSystem">Code</a>
+              </div>
+            </div>
+            <div class="card reveal">
+              <img src="images/projects/churn.png" alt="Churn Prediction">
+              <h3>Churn Prediction</h3>
+              <p>Interpretable XGBoost models with LLM sentiment features for proactive retention.</p>
+              <div class="cta-row">
+                <a class="button secondary" href="projects.html">Case Study</a>
+                <a class="button primary" href="https://github.com/umushtaq1990/ChurnPrediction">Code</a>
+              </div>
+            </div>
+            <div class="card reveal">
+              <img src="images/projects/timeseriesforecast.png" alt="Time Series Forecasting">
+              <h3>Time Series Forecasting</h3>
+              <p>AutoTS and reconciliation; 20% higher accuracy over manual planning.</p>
+              <div class="cta-row">
+                <a class="button secondary" href="projects.html">Case Study</a>
+                <a class="button primary" href="https://github.com/umushtaq1990/TimeSeriesForecasting">Code</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Project 3 -->
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="images/projects/anomaly.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Anomaly Detection</h5>
-            <p class="card-text"> 
-              This project identifies unusual patterns and potential irregularities in data, ensuring the early detection of issues such as fraud, system failures, or data quality problems. Using advanced machine learning techniques, including autoencoders, isolation forests, and statistical methods, the system analyzed real-time and historical data to pinpoint deviations from normal behavior. This solution significantly improved operational efficiency by enabling proactive issue resolution, enhancing system reliability, and minimizing potential business risks through timely interventions.</p>
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="https://github.com/umushtaq1990/AnomalyDetection" class="btn btn-secondary">Source Code</a>
+      </section>
+
+      <section class="section alt">
+        <div class="container split">
+          <div>
+            <div class="section-head">
+              <span class="eyebrow">Delivery</span>
+              <h2>End-to-end delivery</h2>
+              <p class="lead">
+                Structured delivery that aligns stakeholders, reduces risk, and accelerates launch.
+              </p>
+            </div>
+            <div class="list">
+              <div class="timeline-item reveal">Discovery and KPI alignment</div>
+              <div class="timeline-item reveal">Data readiness + experimentation</div>
+              <div class="timeline-item reveal">Production pipelines + monitoring</div>
+              <div class="timeline-item reveal">Product rollout + enablement</div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3>Lets build your next AI product</h3>
+            <p>Open to full-time roles, consulting, and collaborative projects.</p>
+            <div class="cta-row">
+              <a class="button primary" href="contact.html">Contact Me</a>
+              <a class="button secondary" href="about.html">More About Me</a>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Project 4 -->
-      <div class="col-md-6 mb-3">
-        <div class="card">
-          <img src="images/projects/timeseriesforecast.png" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Time Series Forecasting</h5>
-            <p class="card-text"> 
-              This project involved developing a time series forecasting module designed to predict key business metrics while ensuring consistency across hierarchical levels through reconciliation. The module utilized advanced forecasting techniques such as ARIMA, Prophet, and Long Short-Term Memory (LSTM) networks to generate accurate predictions. Reconciliation algorithms were implemented to align forecasts across multiple aggregation levels, ensuring that detailed-level predictions rolled up correctly to higher-level summaries. This solution provided actionable insights for demand planning, inventory optimization, and financial forecasting, enabling data-driven decision-making and improved operational efficiency.</p>
-            <div class="project-actions">
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="https://github.com/umushtaq1990/TimeSeriesForecasting" class="btn btn-secondary">Source Code</a>
-            </div>
-          </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="meta">Based in Germany. Available globally.</div>
+          <div>AI/ML, data platforms, and product leadership.</div>
+        </div>
+        <div class="socials">
+          <a href="https://linkedin.com/in/usman-mushtaq-76699565" target="_blank">
+            <img src="icons/linkedin.png" alt="LinkedIn">LinkedIn
+          </a>
+          <a href="https://github.com/umushtaq1990" target="_blank">
+            <img src="icons/github.png" alt="GitHub">GitHub
+          </a>
+          <a href="https://medium.com/@usmanmushtaq1990" target="_blank">
+            <img src="icons/medium.png" alt="Medium">Medium
+          </a>
         </div>
       </div>
-    </div>
+    </footer>
 
-  </div>
-</section>
-
-
-
-<!-- Skills Section -->
-<section id="skills" class="skills-section bg-white" id="skills">
-  <div class="container">
-    <h2 class="text-center">Skills</h2>
-    <div class="row">
-      <!-- Skill 1 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/1.png" class="card-img-top" alt="Python">
-          <div class="card-body">
-            <h5 class="card-title">Python</h5>
-            <p class="card-text">As a Python expert, I emphasize writing high-quality, modular code that follows best practices of object-oriented programming (OOP). I leverage the power of classes, inheritance, polymorphism, and encapsulation to design scalable and maintainable software solutions. My approach ensures that code is modular and reusable, making it easy to manage and extend. By structuring projects into well-defined modules and components, I create robust, efficient systems that are both easy to test and maintain. I adhere to principles such as DRY (Don't Repeat Yourself) and SOLID to ensure clarity, flexibility, and long-term code quality.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 2 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/2.png" class="card-img-top" alt="Azure ML Service, Synapse and DevOps">
-          <div class="card-body">
-            <h5 class="card-title">Azure ML Service, Synapse and DevOps</h5>
-            <p class="card-text"> I possess strong expertise in leveraging Microsoft Azure's suite of tools to build, deploy, and manage machine learning models at scale. With Azure ML Service, I design and deploy end-to-end machine learning pipelines, from data preparation and model training to deployment and monitoring. I also utilize Azure Synapse Analytics for seamless data integration, analytics, and real-time insights, enabling organizations to process large volumes of data efficiently. Additionally, my proficiency in Azure DevOps allows me to automate the development and deployment lifecycle, ensuring continuous integration and delivery (CI/CD) of machine learning models. By combining these tools, I help streamline operations, reduce time-to-market, and drive data-driven decision-making across the enterprise.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 3 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
-          <div class="card-body">
-            <h5 class="card-title">SQL</h5>
-            <p class="card-text">I have extensive experience with SQL, particularly in designing and developing data pipelines to efficiently process and transform large datasets. By leveraging SQL’s powerful querying capabilities, I create optimized queries for data extraction, transformation, and loading (ETL), ensuring smooth data flow and integration across systems. My expertise includes working with complex joins, subqueries, and window functions, as well as writing stored procedures and scripts to automate data workflows. I focus on creating scalable, reliable, and efficient pipelines that facilitate accurate data processing, enabling organizations to derive meaningful insights and drive data-driven decision-making.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-      <!-- Skill 4 -->
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card">
-          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
-          <div class="card-body">
-            <h5 class="card-title">Data Storytelling</h5>
-            <p class="card-text">I excel in transforming complex data and technical insights into compelling narratives that are easily understood by diverse audiences. With a strong ability to interpret data and identify key takeaways, I craft stories that highlight the relevance of findings and their impact on business decisions. Whether through visualizations, presentations, or written reports, I ensure that my storytelling is engaging, clear, and aligned with organizational goals. My approach combines data analysis with creative communication, making it possible to convey technical concepts in a relatable and impactful way, ensuring that stakeholders from all backgrounds can grasp the value and implications of the data.</p>
-            <a href="#" class="btn btn-outline-primary">Link to course or bootcamp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contact Me Section -->
-<section id="contact" class="contact-section text-center text-white bg-dark">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <p><i class="fas fa-envelope"></i> usmanmushtaq1990@gmail.com</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://linkedin.com/in/usman-mushtaq-76699565" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-          LinkedIn
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://github.com/umushtaq1990" target="_blank">
-          <img src="icons/github.png" alt="GitHub" class="social-icon">
-          GitHub
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://medium.com/@usmanmushtaq1990" target="_blank">
-          <img src="icons/medium.png" alt="Medium" class="social-icon">
-          Medium
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4">
-        <a href="https://youtube.com/@usmanmushtaq3152" target="_blank">
-          <img src="icons/youtube.png" alt="YouTube" class="social-icon">
-          YouTube
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Sticky Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
